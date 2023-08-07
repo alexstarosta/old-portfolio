@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/x-icon" href="assets/faceIcon.png"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkstyles.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="darkmodal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,700,1,0" />
+
+    <title>alexStarosta</title>
+</head>
+
+<body>
+   <div class="wrapper">
+        <div class="windowpanel">
+            <div id="about">
+                <div class="window">
+                    <div class="header" id="about-header">
+                        <div class="buttons">
+                            <div class="btn-close"></div>
+                            <div class="btn-minimize"></div>
+                            <div class="btn-maximize"></div>
+                        </div>
+                        <h1 class="title"><strong>About</strong></h1>
+                    </div>
+                    <div class="container" id="about-container">
+                        <p class="bottom-space">
+                            &emsp; Hey, I’m <span class="name">alexStarosta</span>, an aspiring developer who likes working on cool projects. 
+                        </p>
+                        <p>
+                            &emsp; Here you can find some of my work and other avenues of development & design. 
+                        </p>
+                        <br>
+                        <img class="about-face" src="assets/faceIcon.png">  
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects">
+                <div class="window">
+                    <div class="header" id="projects-header">
+                        <div class="buttons">
+                            <div class="btn-close"></div>
+                            <div class="btn-minimize"></div>
+                            <div class="btn-maximize"></div>
+                        </div>
+                        <h1 class="title"><strong>Projects</strong></h1>
+                    </div>
+                    <div class="container">
+                        <ul>
+                            <li class="first-li">
+                                <img class="list-icon" src="assets/achieveIcon.png">
+                                <div class="description">
+                                    <h2 class="list-title"><a class ="achieve-color" href="https://github.com/alexstarosta/achieve">Achieve</a></h2>
+                                    <p class="list-description">Dynamic goal-setting app written in Swift using SwiftUI that tracks, stores, and manages, your goals.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="list-icon pong-icon" src="assets/pongIcon.png">
+                                <div class="description">
+                                    <h2 class="list-title"><a class ="pong-color" href="https://github.com/alexstarosta/untitledPongGame">Untitled Pong Game</a></h2>
+                                    <p class="list-description">Pong rendition written in Python3 that utilizes Pygame. Includes a Darwinian bot progression.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="list-icon" src="assets/diceIcon.png" onclick="showGame(), closeWork()">
+                                <div class="description">
+                                    <div class="flex">
+                                        <h2 class="list-title"><a class ="dice-color" href="https://github.com/alexstarosta/diceGame">Dice Game</a></h2>
+                                        <h2 class="list-subtitle"><a class ="dice-color" onclick="showGame(), closeWork()">Try Demo</a></h2>
+                                    </div>
+                                    <p class="list-description">Final project created for ICS3U. Uses Lua and the Solar2D engine to create a probability dice game.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="game">
+                <div class="window">
+                    <div class="header" id="projects-header">
+                        <div class="buttons">
+                            <div>
+                                <div class="btn-closereal margin-left gameclose"></div>
+                                <span class="material-symbols-outlined margin-left xgameclose" onclick="closeGame()">
+                                    close
+                                </span>
+                            </div>
+                        </div>
+                        <h1 class="title"><strong>Dice Game</strong></h1>
+                    </div>
+                    <div class="container game">
+                        <div>
+                            <a class="game-button pong-color" id="game-link" onclick="hideLink()" href="diceGame.html5/dicegame.html" target="gameiframe"><strong>Load Game</strong></a>
+                            <div class="game-button-back"></div>
+                        </div>
+                        <iframe src="about:blank" name="gameiframe" height="300" width="200.25" style="border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="photoshop-work" class="design-work-option">
+                <div class="window">
+                    <div class="header" id="design-header">
+                        <div class="buttons">
+                            <div onclick="plusSlides(-1)">
+                                <div class="btn-backward"></div>
+                                <span class="material-symbols-outlined backwards">
+                                    arrow_back
+                                </span>
+                            </div>
+                            <div onclick="plusSlides(1)">
+                                <div class="btn-forward"></div>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </div>
+                            <div>
+                                <div class="btn-maximizereal"></div>
+                                <span class="material-symbols-outlined maximize-icon" onclick="showModal(), updateSlidesOpen()">
+                                    open_in_full
+                                </span>
+                            </div>
+                            <div onclick="closeWork()">
+                                <div class="btn-closereal"></div>
+                                <span class="material-symbols-outlined">
+                                    close
+                                </span>
+                            </div>
+                        </div>
+                        <h1 class="title"><strong>Photos</strong></h1>
+                    </div>
+                    <div class="container slideshow">
+
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Atlas.webp" style="width:100%">
+                        </div>
+                        
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Conifers.webp" style="width:100%">
+                        </div>
+                        
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Thirds.webp" style="width:100%">
+                        </div>
+
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Frames.webp" style="width:100%">
+                        </div>
+                        
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Nature.webp" style="width:100%">
+                        </div>
+                        
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Overgrown.webp" style="width:100%">
+                        </div>
+
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Apple.webp" style="width:100%">
+                        </div>
+                        
+                        <div class="photoSlide">
+                            <img src="assets/photoshopWork/Water.webp" style="width:100%">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="vector-work" class="design-work-option">
+                <div class="window">
+                    <div class="header" id="design-header">
+                        <div class="buttons">
+                            <div onclick="plusvSlides(-1)">
+                                <div class="btn-backward"></div>
+                                <span class="material-symbols-outlined backwards">
+                                    arrow_back
+                                </span>
+                            </div>
+                            <div onclick="plusvSlides(1)">
+                                <div class="btn-forward"></div>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </div>
+                            <div>
+                                <div class="btn-closereal vector-close"></div>
+                                <span class="material-symbols-outlined vector-closex" onclick="closeWork()">
+                                    close
+                                </span>
+                            </div>
+                        </div>
+                        <h1 class="title"><strong>Graphics</strong></h1>
+                    </div>
+                    <div class="container vectorslides">
+
+                        <div class="vectorSlide padding-5">
+                            <img src="assets/vectorWork/achieveLogo.webp" style="width:100%">
+                            <p>Main logo for my dynamic goal app.</p>
+                        </div>
+
+                        <div class="vectorSlide padding-5">
+                            <img src="assets/vectorWork/daycareLogo.webp" style="width:100%">
+                            <p>Logo created for sociology project.</p>
+                        </div>
+
+                        <div class="vectorSlide padding-5">
+                            <img src="assets/vectorWork/fourtuneLogo.webp" style="width:100%">
+                            <p>Logo created for my school's computer science club's upcoming game.</p>
+                        </div>
+
+                        <div class="vectorSlide padding-5">
+                            <img src="assets/vectorWork/hasaLogo.webp" style="width:100%">
+                            <p>Decal created for a physics rocket project.</p>
+                        </div>
+
+                        <div class="vectorSlide bottom-rounding-12">
+                            <img src="assets/vectorWork/scripturamLogo.webp" style="width:100%">
+                            <p>Some examples of profile pictures generated using an Illustrator script.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="design">
+                <div class="window">
+                    <div class="header" id="design-header">
+                        <div class="buttons">
+                            <div class="btn-close"></div>
+                            <div class="btn-minimize"></div>
+                            <div class="btn-maximize"></div>
+                        </div>
+                        <h1 class="title"><strong>Design</strong></h1>
+                    </div>
+                    <div class="container">
+                        <li class="first-li">
+                            <img class="list-icon" src="assets/cameraIcon.png">
+                            <div class="description">
+                                <div onclick="showWork('photoshop-work'), closeGame()"><h2 class="list-title"><a class ="camera-color">Photoshop Work</a></h2></div>
+                                <p class="list-description">A collection of my Adobe Photoshop and photography work.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="list-icon" src="assets/vectorIcon.png">
+                            <div class="description">
+                                <div onclick="showWork('vector-work'), closeGame()"><h2 class="list-title"><a class ="vector-color">Vector Design Work</a></h2></div>
+                                <p class="list-description">An assortment of various Adobe Illustrator projects and vector graphics work.</p>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+            <div id="links">
+                <div class="window">
+                    <div class="header">
+                        <div class="buttons">
+                            <div class="btn-close"></div>
+                            <div class="btn-minimize"></div>
+                            <div class="btn-maximize"></div>
+                        </div>
+                        <h1 class="title"><strong>Links</strong></h1>
+                    </div>
+                    <div class="container">
+                        <li class="first-li">
+                            <img class="list-icon" src="assets/githubIcon.png">
+                            <div class="description">
+                                <h2 class="list-title"><a class ="github-color" href="https://github.com/alexstarosta">Github</a></h2>
+                                <p class="list-description">View my projects and other repositories.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="list-icon" src="assets/linkedinIcon.png">
+                            <div class="description">
+                                <h2 class="list-title"><a class ="linkedin-color" href="https://www.linkedin.com/in/alexstarosta/">LinkedIn</a></h2>
+                                <p class="list-description">View my skills, certifications, and past co-ops.</p>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                <p class="bottom-trademark">© Alex Starosta 2023</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="photoshop-modal" class="modal">
+        <div class="modal-content">
+                <div class="largewindow">
+                    <div class="largeheader" id="photoshop-modal-header">
+                        <div class="buttons">
+                            <div onclick="mplusSlides(-1)">
+                                <div class="btn-backward"></div>
+                                <span class="material-symbols-outlined backwards">
+                                    arrow_back
+                                </span>
+                            </div>
+                            <div onclick="mplusSlides(1)">
+                                <div class="btn-forward"></div>
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </div>
+                        </div>
+                        <h1 class="modal-title"><strong>Photos</strong></h1>
+                        <div class="right-buttons">
+                            <div class="shift-left-10">
+                                <div class="btn-closereal"></div>
+                                <span class="material-symbols-outlined" onclick="closeModal(), updateSlidesClose()">
+                                    close
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container slideshow">
+
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Atlas.webp" style="width:100%">
+                            <p><em>Atlas</em></p>
+                        </div>
+                        
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Conifers.webp" style="width:100%">
+                            <p><em>Conifers</em></p>
+                        </div>
+                        
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Thirds.webp" style="width:100%">
+                            <p><em>Thirds</em></p>
+                        </div>
+
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Frames.webp" style="width:100%">
+                            <p><em>Frames</em></p>
+                        </div>
+                        
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Nature.webp" style="width:100%">
+                            <p><em>Nature</em></p>
+                        </div>
+                        
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Overgrown.webp" style="width:44.44%">
+                            <p><em>Overgrown</em></p>
+                        </div>
+
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Apple.webp" style="width:44.44%">
+                            <p><em>Apple</em></p>
+                        </div>
+                        
+                        <div class="mphotoSlide">
+                            <img src="assets/photoshopWork/Water.webp" style="width:44.44%">
+                            <p><em>Water</em></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/vectorslides.js"></script>
+    <script src="scripts/designwork.js"></script>
+    <script src="scripts/modalscript.js"></script>
+    <script src="scripts/gamescripts.js"></script>
+    <script src="scripts/firebaseInfo.js" type="module"></script>
+
+</body>
+
+</html>

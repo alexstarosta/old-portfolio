@@ -1,0 +1,57 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    transition: 0.3s;
+}
+
+.modal-content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation-name: zoomin;
+    animation-duration: 0.4s
+}
+
+.largewindow {
+    width: 57vw;
+    margin: 7px;
+    max-height: 80vh;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 10px 0px #dbdbdb;
+    display: block;
+    zoom: 100%;
+}
+
+.largeheader {
+    padding-top: 1px;
+    width: 57vw;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: inset 0px 0px 10px 0px #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: small;
+    text-align: center;
+}
+
+.shift-left-10 {
+    margin-right: 10px;
+}
+
+@keyframes zoomin {
+    from {scale:10%; opacity:0}
+    to {scale:100%; opacity:1}
+}

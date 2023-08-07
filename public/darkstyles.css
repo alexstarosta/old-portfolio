@@ -1,0 +1,159 @@
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #35363A;
+    }
+
+    .window {
+        background-color: #45454b;
+        box-shadow: inset 0px 0px 10px 0px #35363A;
+    }
+
+    .header {
+        background-color: #202124;
+        box-shadow: inset 0px 0px 10px 0px #35363A;
+    }
+
+    .title {
+        color: #eeeeee;
+    }
+
+    .container {
+        color: #D6D6D7;
+    }
+
+    .btn-close {
+        background-color: #ff5c5c;
+    }
+
+    .btn-minimize {
+        background-color: #ffb444;
+    }
+
+    .btn-maximize {
+        background-color: #00ca2c;
+    }
+
+    .btn-backward {
+        background-color: #868686;
+    }
+
+    .btn-forward {
+        background-color: #868686;
+    }
+
+    .btn-maximizereal {
+        background-color: #868686;
+    }
+
+    .btn-maximizerealextended {
+        background-color: #868686;
+    }
+
+    .btn-closereal {
+        background-color: #868686;
+    }
+
+    .name {
+        font-weight: bold;
+        color: #3ae1ff;
+    }
+
+    .achieve-color {
+        color: #37d362;
+    }
+    .achieve-color::after {
+        border-bottom: 1px solid #37d362;
+    }
+    .achieve-color:hover {
+        color: #74fc9a;
+    }
+
+    .pong-color {
+        color: #a1a1a1;
+    }
+    .pong-color::after {
+        border-bottom: 1px solid #787878;
+    }
+    .pong-color:hover {
+        color: #d6d6d6;
+    }
+
+    .dice-color {
+        color: #eb6157;
+    }
+    .dice-color::after {
+        border-bottom: 1px solid #993d36;
+    }
+    .dice-color:hover {
+        color: #f8a19a;
+    }
+
+    .camera-color {
+        color: #33a5fc;
+    }
+    .camera-color::after {
+        border-bottom: 1px solid #33a5fc;
+    }
+    .camera-color:hover {
+        color: #8fceff;
+    }
+
+    .vector-color {
+        color: #ff9d1f;
+    }
+    .vector-color::after {
+        border-bottom: 1px solid #ff9d1f;
+    }
+    .vector-color:hover {
+        color: #ffbd83;
+    }
+
+    .github-color {
+        color: #aaaaaa;
+    }
+    .github-color::after {
+        border-bottom: 1px solid #6e6666;
+    }
+    .github-color:hover {
+        color: #b9b9b9;
+    }
+
+    .linkedin-color {
+        color: #3aa9e6;
+    }
+    .linkedin-color::after {
+        border-bottom: 1px solid #0077b5;
+    }
+    .linkedin-color:hover {
+        color: #83d2fd;
+    }
+
+    .list-icon {
+        box-shadow: 0px 10px 13px -7px #202124, 0px 2px 8px 4px rgba(0,0,0,0);
+    }
+
+    .list-title {
+        color: #eeeeee;
+    }
+
+    .list-subtitle {
+        color: #D6D6D7;
+    }
+
+    .list-description {
+        color: #D6D6D7;
+    }
+
+    .mphotoSlide p{
+        color: #D6D6D7;
+    }
+
+    .vectorSlide p{
+        color: #D6D6D7;
+    }
+
+    .bottom-trademark {
+        color: #D6D6D7;
+    }
+}

@@ -1,0 +1,21 @@
+@media (prefers-color-scheme: dark) {
+
+    .modal {
+        background-color: rgba(255, 255, 255, 0.116); 
+    }
+
+    .largewindow {
+        background-color: #45454b;
+        box-shadow: inset 0px 0px 10px 0px #35363A;
+    }
+
+    .largeheader {
+        background-color: #202124;
+        box-shadow: inset 0px 0px 10px 0px #35363A;
+    }
+
+    .modal-title {
+        color: #eeeeee;
+    }
+
+}
